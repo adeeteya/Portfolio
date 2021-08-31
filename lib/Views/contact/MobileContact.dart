@@ -45,12 +45,12 @@ class MobileContact extends StatelessWidget {
             width: double.infinity,
             padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   'Contact Me',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
                 ),
-                SizedBox(height: 10),
                 ...contactItems.map((item) {
                   return MobileContactCard(contactItem: item);
                 }).toList(),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class MobileDrawer extends StatelessWidget {
   final PageController controller;
@@ -9,7 +10,7 @@ class MobileDrawer extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        DrawerHeader(child: Text("Jump To")),
+        DrawerHeader(child: Lottie.asset('assets/person.json')),
         TextButton(
           onPressed: () {
             controller.animateToPage(0,

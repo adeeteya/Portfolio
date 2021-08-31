@@ -18,6 +18,7 @@ dependencies:
   hovering: ^1.0.4
   animated_text_kit: ^4.2.1
   url_launcher: ^6.0.9
+  lottie: ^1.1.0
 
 dev_dependencies:
   flutter_test:

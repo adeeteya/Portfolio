@@ -34,6 +34,6 @@ class SkillItem {
     SkillItem(
         imageAsset: AssetImage('assets/icons/Python.png'), skillName: 'Python'),
     SkillItem(
-        imageAsset: AssetImage('iassets/cons/Java.png'), skillName: 'Java'),
+        imageAsset: AssetImage('assets/icons/Java.png'), skillName: 'Java'),
   ];
 }

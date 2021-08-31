@@ -31,6 +31,7 @@ class _MobileProjectsState extends State<MobileProjects> {
           image: DecorationImage(
               image: AssetImage('assets/projects_bg.png'), fit: BoxFit.cover)),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Text(
@@ -48,7 +49,6 @@ class _MobileProjectsState extends State<MobileProjects> {
                 },
                 child: Text('View More')),
           ]),
-          SizedBox(height: 70),
           FutureBuilder<RepoList?>(
               future: fetchRepos(),
               initialData: null,
