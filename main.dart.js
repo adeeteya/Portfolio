@@ -64023,10 +64023,10 @@ glC(){return"\\"}}
 E.a_P.prototype={}
 Z.Db.prototype={
 I(a,b){var s=null,r=t.p
-return T.cR(H.a([T.fC(X.aeC("about_me.json"),1),T.fC(T.cJ(H.a([L.aO("About Me",A.aP(s,s,s,s,s,s,s,s,s,s,s,48,s,C.Z,s,s,!0,s,s,s,s,s,s,s,s),s,s),L.aO("App Developer and Tech Enthusiast based in India. Currently Interested in Flutter and AI. Love playing sports and videogames on my freetime.",A.aP(s,s,s,s,s,s,s,s,s,s,s,18,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s)],r),C.t,C.bS),1)],r),C.t,C.a_,C.a3)}}
+return T.cR(H.a([T.fC(X.aeC("assets/about_me.json"),1),T.fC(T.cJ(H.a([L.aO("About Me",A.aP(s,s,s,s,s,s,s,s,s,s,s,48,s,C.Z,s,s,!0,s,s,s,s,s,s,s,s),s,s),L.aO("App Developer and Tech Enthusiast based in India. Currently Interested in Flutter and AI. Love playing sports and videogames on my freetime.",A.aP(s,s,s,s,s,s,s,s,s,s,s,18,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s)],r),C.t,C.bS),1)],r),C.t,C.a_,C.a3)}}
 E.Fj.prototype={
 I(a,b){var s=null,r=t.p
-return T.cJ(H.a([T.fC(X.aeC("about_me.json"),1),T.fC(new T.ek(C.ce,T.cJ(H.a([L.aO("About Me",A.aP(s,s,s,s,s,s,s,s,s,s,s,18,s,C.Z,s,s,!0,s,s,s,s,s,s,s,s),s,s),L.aO("App Developer and Tech Enthusiast based in India, . Currently Interested in Flutter and AI. Love playing sports and videogames on my freetime.",A.aP(s,s,s,s,s,s,s,s,s,s,s,16,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s)],r),C.t,C.bS),s),2)],r),C.t,C.a_)}}
+return T.cJ(H.a([T.fC(X.aeC("assets/about_me.json"),1),T.fC(new T.ek(C.ce,T.cJ(H.a([L.aO("About Me",A.aP(s,s,s,s,s,s,s,s,s,s,s,18,s,C.Z,s,s,!0,s,s,s,s,s,s,s,s),s,s),L.aO("App Developer and Tech Enthusiast based in India, . Currently Interested in Flutter and AI. Love playing sports and videogames on my freetime.",A.aP(s,s,s,s,s,s,s,s,s,s,s,16,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s)],r),C.t,C.bS),s),2)],r),C.t,C.a_)}}
 G.Dc.prototype={
 I(a,b){var s,r,q=null,p=H.a([new Y.eb(C.e4,"Phone","+91 7200972008",new G.Tz()),new Y.eb(C.e3,"Mail","aditya.r@email.com",new G.TA()),new Y.eb(C.f6,"Discord","Aditya#0039",new G.TB(b))],t.c3),o=t.Wx,n=t.p
 o=T.fC(M.dI(q,T.cJ(H.a([L.aO("Contact Me",A.aP(q,q,q,q,q,q,q,q,q,q,q,48,q,C.Z,q,q,!0,q,q,q,q,q,q,q,q),q,q),T.bz(q,40,q),T.cR(P.ap(new H.aq(p,new G.TC(),o),!0,o.i("b7.E")),C.t,C.bj,C.a3)],n),C.t,C.a_),C.m,new P.v(4281885027),q,q,q,q,q,q,new V.ay(40,20,40,20),q,q,q),5)
