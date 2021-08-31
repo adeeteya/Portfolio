@@ -12,7 +12,7 @@ class MobileHome extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Expanded(
-          child: Image.asset('profile_image.png'),
+          child: Image.asset('assets/profile_image.png'),
         ),
         Expanded(
           child: Padding(

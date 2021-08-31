@@ -7,7 +7,7 @@ class DesktopAbout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(child: Image.asset('about_me_vector.png')),
+        Expanded(child: Image.asset('assets/about_me_vector.png')),
         Expanded(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

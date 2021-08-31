@@ -83,7 +83,7 @@ class DesktopHome extends StatelessWidget {
                               content: Text('Discord Id copied to clipboard')));
                         },
                         icon: Image.asset(
-                          'discord_icon.png',
+                          'assets/discord_icon.png',
                           color: Color(0xFFE1E1E1),
                         )),
                   ],
@@ -124,7 +124,7 @@ class DesktopHome extends StatelessWidget {
           ),
         ),
         Expanded(
-          child: Image.asset('profile_image.png'),
+          child: Image.asset('assets/profile_image.png'),
         ),
       ],
     );

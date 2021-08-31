@@ -29,7 +29,7 @@ class _DesktopProjectsState extends State<DesktopProjects> {
       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 5),
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('projects_bg.png'), fit: BoxFit.cover)),
+              image: AssetImage('assets/projects_bg.png'), fit: BoxFit.cover)),
       child: Column(
         children: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [

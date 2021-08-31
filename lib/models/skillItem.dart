@@ -6,25 +6,34 @@ class SkillItem {
   const SkillItem({required this.imageAsset, required this.skillName});
   static const List<SkillItem> usingNowItems = [
     SkillItem(
-        imageAsset: AssetImage('icons/Flutter.png'), skillName: 'Flutter'),
+        imageAsset: AssetImage('assets/icons/Flutter.png'),
+        skillName: 'Flutter'),
     SkillItem(
-        imageAsset: AssetImage('icons/Android.png'), skillName: 'Android'),
-    SkillItem(imageAsset: AssetImage('icons/Git.png'), skillName: 'Git'),
+        imageAsset: AssetImage('assets/icons/Android.png'),
+        skillName: 'Android'),
+    SkillItem(imageAsset: AssetImage('assets/icons/Git.png'), skillName: 'Git'),
     SkillItem(
-        imageAsset: AssetImage('icons/Arduino.png'), skillName: 'Arduino'),
+        imageAsset: AssetImage('assets/icons/Arduino.png'),
+        skillName: 'Arduino'),
   ];
   static const List<SkillItem> learningItems = [
     SkillItem(
-        imageAsset: AssetImage('icons/Machine_Learning.png'), skillName: 'ML'),
+        imageAsset: AssetImage('assets/icons/Machine_Learning.png'),
+        skillName: 'ML'),
     SkillItem(
-        imageAsset: AssetImage('icons/Firebase.png'), skillName: 'Firebase'),
-    SkillItem(imageAsset: AssetImage('icons/MySql.png'), skillName: 'MySql'),
-    SkillItem(imageAsset: AssetImage('icons/Figma.png'), skillName: 'Figma'),
+        imageAsset: AssetImage('assets/icons/Firebase.png'),
+        skillName: 'Firebase'),
+    SkillItem(
+        imageAsset: AssetImage('assets/icons/MySql.png'), skillName: 'MySql'),
+    SkillItem(
+        imageAsset: AssetImage('assets/icons/Figma.png'), skillName: 'Figma'),
   ];
   static const List<SkillItem> otherSkillsItems = [
-    SkillItem(imageAsset: AssetImage('icons/C.png'), skillName: 'C'),
-    SkillItem(imageAsset: AssetImage('icons/Cpp.png'), skillName: 'C++'),
-    SkillItem(imageAsset: AssetImage('icons/Python.png'), skillName: 'Python'),
-    SkillItem(imageAsset: AssetImage('icons/Java.png'), skillName: 'Java'),
+    SkillItem(imageAsset: AssetImage('assets/icons/C.png'), skillName: 'C'),
+    SkillItem(imageAsset: AssetImage('assets/icons/Cpp.png'), skillName: 'C++'),
+    SkillItem(
+        imageAsset: AssetImage('assets/icons/Python.png'), skillName: 'Python'),
+    SkillItem(
+        imageAsset: AssetImage('iassets/cons/Java.png'), skillName: 'Java'),
   ];
 }

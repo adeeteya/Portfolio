@@ -7,7 +7,7 @@ class MobileAbout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(child: Image.asset('about_me_vector.png')),
+        Expanded(child: Image.asset('assets/about_me_vector.png')),
         Expanded(
           flex: 2,
           child: Padding(

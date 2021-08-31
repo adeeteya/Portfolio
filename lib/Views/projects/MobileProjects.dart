@@ -29,7 +29,7 @@ class _MobileProjectsState extends State<MobileProjects> {
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('projects_bg.png'), fit: BoxFit.cover)),
+              image: AssetImage('assets/projects_bg.png'), fit: BoxFit.cover)),
       child: Column(
         children: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
