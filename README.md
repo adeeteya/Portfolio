@@ -1,16 +1,11 @@
-# portfolio
+# My Portfolio Website
 
-A Flutter portfolio website.
+A portfolio website I created for myself. Website built with flutter web.
 
-## Getting Started
+## Things I Learnt
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+> Making a Responsive Website
+> Implementing a drawer for the mobile view
+> Using Hovering widgets and adding hovering effects for desktop
+> Deploying a website to github pages
+> Using Github Api to fetch repos
