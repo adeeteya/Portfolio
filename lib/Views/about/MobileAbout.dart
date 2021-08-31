@@ -8,7 +8,7 @@ class MobileAbout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(child: Lottie.asset('about_me.json')),
+        Expanded(child: Lottie.asset('assets/about_me.json')),
         Expanded(
           flex: 2,
           child: Padding(
@@ -21,7 +21,7 @@ class MobileAbout extends StatelessWidget {
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                 ),
                 Text(
-                  'App Developer and Tech Enthusiast based in India. Currently Interested in Flutter and AI. Love playing sports and videogames on my freetime. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique convallis elementum. Morbi auctor, mi eget ullamcorper facilisis, est neque feugiat tortor, non mollis justo velit ut mi. Quisque lacus elit, finibus eget commodo maximus, dapibus posuere nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas in blandit mi. Cras blandit lectus nisl, id tincidunt elit consectetur et. Nam dignissim felis sed blandit convallis.',
+                  'App Developer and Tech Enthusiast based in India, . Currently Interested in Flutter and AI. Love playing sports and videogames on my freetime.',
                   style: TextStyle(fontSize: 16),
                 )
               ],
