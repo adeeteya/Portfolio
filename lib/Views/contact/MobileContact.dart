@@ -51,6 +51,7 @@ class MobileContact extends StatelessWidget {
                   'Contact Me',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
                 ),
+                SizedBox(height: 10),
                 ...contactItems.map((item) {
                   return MobileContactCard(contactItem: item);
                 }).toList(),
