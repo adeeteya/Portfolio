@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
+import 'package:portfolio/CustomTheme.dart';
 import 'package:portfolio/models/Repo.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -20,7 +21,8 @@ class DesktopRepoCard extends StatelessWidget {
         cursor: SystemMouseCursors.click,
         padding: EdgeInsets.all(16),
         decoration: BoxDecoration(
-            color: Color(0xFF2F2F2F), borderRadius: BorderRadius.circular(30)),
+            color: customTheme.cardButtonColor,
+            borderRadius: BorderRadius.circular(30)),
         hoverDecoration: BoxDecoration(
             color: Color(0X80EEBF63), borderRadius: BorderRadius.circular(20)),
         child: Column(

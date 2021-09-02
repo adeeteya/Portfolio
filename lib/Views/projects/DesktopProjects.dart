@@ -5,6 +5,8 @@ import 'package:portfolio/models/Repo.dart';
 import 'package:portfolio/widgets/RepoCard/DesktopRepoCard.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../CustomTheme.dart';
+
 Future<RepoList?> fetchRepos() async {
   final response = await http
       .get(Uri.parse("https://api.github.com/users/adityar224/repos"));
@@ -29,8 +31,12 @@ class _DesktopProjectsState extends State<DesktopProjects> {
       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 5),
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/projects_bg.png'), fit: BoxFit.cover)),
+              image: (customTheme.currentTheme == ThemeMode.dark)
+                  ? AssetImage('assets/projects_dark_bg.png')
+                  : AssetImage('assets/projects_light_bg.png'),
+              fit: BoxFit.cover)),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Text(
@@ -39,16 +45,18 @@ class _DesktopProjectsState extends State<DesktopProjects> {
             ),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFCD921E),
+                    primary: customTheme.primaryColor,
                     padding: EdgeInsets.all(20),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
                 onPressed: () {
                   launch("https://github.com/adityar224");
                 },
-                child: Text('View More')),
+                child: Text(
+                  'View More',
+                  style: TextStyle(color: Colors.white),
+                )),
           ]),
-          SizedBox(height: 100),
           FutureBuilder<RepoList?>(
               future: fetchRepos(),
               initialData: null,
@@ -73,7 +81,7 @@ class _DesktopProjectsState extends State<DesktopProjects> {
                 }
                 return Center(
                     child: CircularProgressIndicator(
-                  color: Color(0xFFEEBF63),
+                  color: CustomColors.porsche,
                 ));
               }),
         ],

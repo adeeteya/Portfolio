@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:portfolio/CustomTheme.dart';
 import 'package:portfolio/models/contactItem.dart';
 import 'package:portfolio/widgets/ContactCard/DesktopContactCard.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -41,13 +42,16 @@ class DesktopContact extends StatelessWidget {
         Expanded(
           flex: 5,
           child: Container(
-            color: Color(0xFF386163),
+            color: customTheme.contactBackgroundColor,
             padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
             child: Column(
               children: [
                 Text(
                   'Contact Me',
-                  style: TextStyle(fontSize: 48, fontWeight: FontWeight.w600),
+                  style: TextStyle(
+                      fontSize: 48,
+                      fontWeight: FontWeight.w600,
+                      color: customTheme.alternateHeadingText),
                 ),
                 SizedBox(height: 40),
                 Row(
@@ -74,7 +78,8 @@ class DesktopContact extends StatelessWidget {
                         duration: Duration(milliseconds: 1300),
                         curve: Curves.easeIn);
                   },
-                  style: TextButton.styleFrom(primary: Color(0xFFF1F1F1)),
+                  style: TextButton.styleFrom(
+                      primary: customTheme.outlinedButtonColor),
                   icon: Icon(Icons.arrow_upward),
                   label: Text('Back to Top'))
             ],

@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:portfolio/CustomTheme.dart';
 import 'package:portfolio/models/Repo.dart';
 import 'package:portfolio/widgets/RepoCard/MobileRepoCard.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -29,7 +30,10 @@ class _MobileProjectsState extends State<MobileProjects> {
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/projects_bg.png'), fit: BoxFit.cover)),
+              image: (customTheme.currentTheme == ThemeMode.dark)
+                  ? AssetImage('assets/projects_dark_bg.png')
+                  : AssetImage('assets/projects_light_bg.png'),
+              fit: BoxFit.cover)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -40,14 +44,17 @@ class _MobileProjectsState extends State<MobileProjects> {
             ),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFCD921E),
+                    primary: customTheme.primaryColor,
                     padding: EdgeInsets.all(20),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
                 onPressed: () {
                   launch("https://github.com/adityar224");
                 },
-                child: Text('View More')),
+                child: Text(
+                  'View More',
+                  style: TextStyle(color: Colors.white),
+                )),
           ]),
           FutureBuilder<RepoList?>(
               future: fetchRepos(),
@@ -73,7 +80,7 @@ class _MobileProjectsState extends State<MobileProjects> {
                 }
                 return Center(
                     child: CircularProgressIndicator(
-                  color: Color(0xFFEEBF63),
+                  color: CustomColors.porsche,
                 ));
               }),
         ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/CustomTheme.dart';
 import 'package:portfolio/models/contactItem.dart';
 
 class MobileContactCard extends StatelessWidget {
@@ -18,20 +19,21 @@ class MobileContactCard extends StatelessWidget {
         padding: EdgeInsets.all(8),
         margin: EdgeInsets.only(bottom: 10),
         decoration: BoxDecoration(
-            color: Color(0xFF2F2F2F), borderRadius: BorderRadius.circular(30)),
+            color: customTheme.cardButtonColor,
+            borderRadius: BorderRadius.circular(30)),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Icon(
             contactItem.iconData,
             size: 32,
-            color: Color(0xFFF5BF75),
+            color: CustomColors.porsche,
           ),
           Text(
             contactItem.title,
-            style: TextStyle(fontSize: 16),
+            style: TextStyle(fontSize: 16, color: customTheme.navBarTextColor),
           ),
           Text(
             contactItem.value,
-            style: TextStyle(fontSize: 16),
+            style: TextStyle(fontSize: 16, color: customTheme.navBarTextColor),
             textAlign: TextAlign.center,
           )
         ]),

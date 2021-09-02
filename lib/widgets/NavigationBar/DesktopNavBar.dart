@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hovering/hovering.dart';
 
+import '../../CustomTheme.dart';
+
 class DesktopNavBar extends StatelessWidget with PreferredSizeWidget {
   final PageController controller;
   final int pageNo;
@@ -16,7 +18,8 @@ class DesktopNavBar extends StatelessWidget with PreferredSizeWidget {
       titleSpacing: 80,
       title: Text(
         'Aditya R',
-        style: GoogleFonts.parisienne(fontSize: 24),
+        style: GoogleFonts.parisienne(
+            fontSize: 24, color: customTheme.navBarTextColor),
       ),
       actions: [
         HoverButton(
@@ -24,8 +27,10 @@ class DesktopNavBar extends StatelessWidget with PreferredSizeWidget {
             controller.animateToPage(0,
                 duration: Duration(seconds: 1), curve: Curves.easeInOutSine);
           },
-          textColor: (pageNo == 0) ? Color(0xFFEEBF63) : Color(0xFFF1F1F1),
-          hoverTextColor: Color(0xFFEEBF63),
+          textColor: (pageNo == 0)
+              ? CustomColors.porsche
+              : customTheme.navBarTextColor,
+          hoverTextColor: CustomColors.porsche,
           child: Text('home'),
         ),
         HoverButton(
@@ -33,8 +38,10 @@ class DesktopNavBar extends StatelessWidget with PreferredSizeWidget {
             controller.animateToPage(1,
                 duration: Duration(seconds: 1), curve: Curves.easeInOutSine);
           },
-          textColor: (pageNo == 1) ? Color(0xFFEEBF63) : Color(0xFFF1F1F1),
-          hoverTextColor: Color(0xFFEEBF63),
+          textColor: (pageNo == 1)
+              ? CustomColors.porsche
+              : customTheme.navBarTextColor,
+          hoverTextColor: CustomColors.porsche,
           child: Text('about'),
         ),
         HoverButton(
@@ -42,8 +49,10 @@ class DesktopNavBar extends StatelessWidget with PreferredSizeWidget {
             controller.animateToPage(2,
                 duration: Duration(seconds: 1), curve: Curves.easeInOutSine);
           },
-          textColor: (pageNo == 2) ? Color(0xFFEEBF63) : Color(0xFFF1F1F1),
-          hoverTextColor: Color(0xFFEEBF63),
+          textColor: (pageNo == 2)
+              ? CustomColors.porsche
+              : customTheme.navBarTextColor,
+          hoverTextColor: CustomColors.porsche,
           child: Text('skills'),
         ),
         HoverButton(
@@ -51,8 +60,10 @@ class DesktopNavBar extends StatelessWidget with PreferredSizeWidget {
             controller.animateToPage(3,
                 duration: Duration(seconds: 1), curve: Curves.easeInOutSine);
           },
-          textColor: (pageNo == 3) ? Color(0xFFEEBF63) : Color(0xFFF1F1F1),
-          hoverTextColor: Color(0xFFEEBF63),
+          textColor: (pageNo == 3)
+              ? CustomColors.porsche
+              : customTheme.navBarTextColor,
+          hoverTextColor: CustomColors.porsche,
           child: Text('projects'),
         ),
         HoverButton(
@@ -60,10 +71,19 @@ class DesktopNavBar extends StatelessWidget with PreferredSizeWidget {
             controller.animateToPage(4,
                 duration: Duration(seconds: 1), curve: Curves.easeInOutSine);
           },
-          textColor: (pageNo == 4) ? Color(0xFFEEBF63) : Color(0xFFF1F1F1),
-          hoverTextColor: Color(0xFFEEBF63),
+          textColor: (pageNo == 4)
+              ? CustomColors.porsche
+              : customTheme.navBarTextColor,
+          hoverTextColor: CustomColors.porsche,
           child: Text('contact'),
         ),
+        IconButton(
+            onPressed: () {
+              customTheme.toggleTheme();
+            },
+            icon: (customTheme.currentTheme == ThemeMode.dark)
+                ? Icon(Icons.light_mode, size: 18)
+                : Icon(Icons.dark_mode, size: 18)),
         SizedBox(width: 40)
       ],
     );

@@ -2,6 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:portfolio/CustomTheme.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MobileHome extends StatelessWidget {
@@ -22,19 +23,22 @@ class MobileHome extends StatelessWidget {
               children: [
                 Text(
                   'Hey!',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                      color: customTheme.hintText),
                 ),
                 RichText(
                   text: TextSpan(
                       style: TextStyle(
                           fontSize: 24,
-                          color: Color(0xFFF1F1F1),
-                          fontWeight: FontWeight.w600),
+                          fontWeight: FontWeight.w600,
+                          color: Theme.of(context).textTheme.bodyText1?.color),
                       text: "I'm ",
                       children: [
                         TextSpan(
                             text: 'Aditya R',
-                            style: TextStyle(color: Color(0xFFEEBF63)))
+                            style: TextStyle(color: CustomColors.porsche))
                       ]),
                 ),
                 SizedBox(height: 10),
@@ -55,7 +59,7 @@ class MobileHome extends StatelessWidget {
                 SizedBox(height: 10),
                 Text(
                   'Contact Me',
-                  style: TextStyle(color: Color(0xFFE1E1E1), fontSize: 18),
+                  style: TextStyle(color: customTheme.hintText, fontSize: 18),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -66,7 +70,6 @@ class MobileHome extends StatelessWidget {
                         },
                         icon: Icon(
                           Icons.phone,
-                          color: Color(0xFFE1E1E1),
                         )),
                     SizedBox(width: 10),
                     IconButton(
@@ -75,7 +78,6 @@ class MobileHome extends StatelessWidget {
                         },
                         icon: Icon(
                           Icons.mail,
-                          color: Color(0xFFE1E1E1),
                         )),
                     SizedBox(width: 10),
                     IconButton(
@@ -86,7 +88,6 @@ class MobileHome extends StatelessWidget {
                         },
                         icon: Icon(
                           MdiIcons.discord,
-                          color: Color(0xFFE1E1E1),
                         )),
                   ],
                 ),
@@ -96,7 +97,6 @@ class MobileHome extends StatelessWidget {
                   children: [
                     ElevatedButton.icon(
                       style: ElevatedButton.styleFrom(
-                          primary: Color(0xFFCD921E),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
                           padding: EdgeInsets.symmetric(
@@ -105,13 +105,20 @@ class MobileHome extends StatelessWidget {
                       onPressed: () {
                         launch("mailto:aditya.r@email.com?body=Hey,");
                       },
-                      label: Text('Mail me', style: TextStyle(fontSize: 16)),
+                      label: Text(
+                        'Mail me',
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                     SizedBox(width: 20),
                     OutlinedButton.icon(
                       style: OutlinedButton.styleFrom(
-                          primary: Color(0xFFF1F1F1),
-                          side: BorderSide(color: Color(0xFFCD921E), width: 2),
+                          primary: customTheme.outlinedButtonColor,
+                          side: BorderSide(
+                              color: customTheme.primaryColor, width: 2),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
                           padding: EdgeInsets.all(16)),
@@ -120,8 +127,9 @@ class MobileHome extends StatelessWidget {
                         launch(
                             "https://www.linkedin.com/in/aditya-r-2496941ba");
                       },
-                      label:
-                          Text('Download CV', style: TextStyle(fontSize: 16)),
+                      label: Text('Download CV',
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold)),
                     )
                   ],
                 )

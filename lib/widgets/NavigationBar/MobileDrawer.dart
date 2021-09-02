@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:portfolio/CustomTheme.dart';
 
 class MobileDrawer extends StatelessWidget {
   final PageController controller;
@@ -22,8 +23,8 @@ class MobileDrawer extends StatelessWidget {
             style: TextStyle(
                 fontSize: 24,
                 color: (controller.page == 0)
-                    ? Color(0xFFEEBF63)
-                    : Color(0xFFF1F1F1)),
+                    ? CustomColors.porsche
+                    : customTheme.navBarTextColor),
           ),
         ),
         TextButton(
@@ -37,8 +38,8 @@ class MobileDrawer extends StatelessWidget {
             style: TextStyle(
                 fontSize: 24,
                 color: (controller.page == 1)
-                    ? Color(0xFFEEBF63)
-                    : Color(0xFFF1F1F1)),
+                    ? CustomColors.porsche
+                    : customTheme.navBarTextColor),
           ),
         ),
         TextButton(
@@ -52,8 +53,8 @@ class MobileDrawer extends StatelessWidget {
             style: TextStyle(
                 fontSize: 24,
                 color: (controller.page == 2)
-                    ? Color(0xFFEEBF63)
-                    : Color(0xFFF1F1F1)),
+                    ? CustomColors.porsche
+                    : customTheme.navBarTextColor),
           ),
         ),
         TextButton(
@@ -67,8 +68,8 @@ class MobileDrawer extends StatelessWidget {
             style: TextStyle(
                 fontSize: 24,
                 color: (controller.page == 3)
-                    ? Color(0xFFEEBF63)
-                    : Color(0xFFF1F1F1)),
+                    ? CustomColors.porsche
+                    : customTheme.navBarTextColor),
           ),
         ),
         TextButton(
@@ -82,8 +83,8 @@ class MobileDrawer extends StatelessWidget {
             style: TextStyle(
                 fontSize: 24,
                 color: (controller.page == 4)
-                    ? Color(0xFFEEBF63)
-                    : Color(0xFFF1F1F1)),
+                    ? CustomColors.porsche
+                    : customTheme.navBarTextColor),
           ),
         ),
       ],

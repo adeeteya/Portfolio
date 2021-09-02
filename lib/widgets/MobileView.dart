@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/CustomTheme.dart';
 import 'package:portfolio/Views/about/MobileAbout.dart';
 import 'package:portfolio/Views/contact/MobileContact.dart';
 import 'package:portfolio/Views/home/MobileHome.dart';
@@ -30,8 +31,18 @@ class _MobileViewState extends State<MobileView> {
         centerTitle: true,
         title: Text(
           'Aditya R',
-          style: GoogleFonts.parisienne(fontSize: 18),
+          style: GoogleFonts.parisienne(
+              fontSize: 18, color: customTheme.navBarTextColor),
         ),
+        actions: [
+          IconButton(
+              onPressed: () {
+                customTheme.toggleTheme();
+              },
+              icon: (customTheme.currentTheme == ThemeMode.dark)
+                  ? Icon(Icons.light_mode, size: 18)
+                  : Icon(Icons.dark_mode, size: 18)),
+        ],
       ),
       drawer: Drawer(
           child: MobileDrawer(

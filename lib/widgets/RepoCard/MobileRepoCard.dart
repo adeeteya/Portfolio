@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/CustomTheme.dart';
 import 'package:portfolio/models/Repo.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -18,7 +19,8 @@ class MobileRepoCard extends StatelessWidget {
         margin: EdgeInsets.only(right: 20),
         padding: EdgeInsets.all(16),
         decoration: BoxDecoration(
-            color: Color(0xFF2F2F2F), borderRadius: BorderRadius.circular(30)),
+            color: customTheme.cardButtonColor,
+            borderRadius: BorderRadius.circular(30)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
+import 'package:portfolio/CustomTheme.dart';
 import 'package:portfolio/models/contactItem.dart';
 
 class DesktopContactCard extends StatelessWidget {
@@ -19,20 +20,23 @@ class DesktopContactCard extends StatelessWidget {
         cursor: SystemMouseCursors.click,
         padding: EdgeInsets.all(8),
         decoration: BoxDecoration(
-            color: Color(0xFF2F2F2F), borderRadius: BorderRadius.circular(30)),
+            color: customTheme.cardButtonColor,
+            borderRadius: BorderRadius.circular(30)),
         hoverDecoration: BoxDecoration(
             color: Color(0X80EEBF63), borderRadius: BorderRadius.circular(20)),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Icon(
             contactItem.iconData,
             size: 64,
-            color: Color(0xFFF5BF75),
+            color: CustomColors.porsche,
           ),
           Text(
             contactItem.title,
-            style: TextStyle(fontSize: 18),
+            style: TextStyle(fontSize: 18, color: customTheme.navBarTextColor),
           ),
-          Text(contactItem.value, style: TextStyle(fontSize: 18))
+          Text(contactItem.value,
+              style:
+                  TextStyle(fontSize: 18, color: customTheme.navBarTextColor))
         ]),
       ),
     );

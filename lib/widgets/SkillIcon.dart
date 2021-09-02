@@ -21,7 +21,6 @@ class SkillIcon extends StatelessWidget {
         Text(
           skillItem.skillName,
           style: TextStyle(
-            color: Color(0xFFE1E1E1),
             fontSize: (isDesktop) ? 18 : 16,
           ),
         )

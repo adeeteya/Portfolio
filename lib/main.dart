@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/CustomTheme.dart';
 import 'package:portfolio/widgets/DesktopView.dart';
 import 'package:portfolio/widgets/MobileView.dart';
 import 'package:portfolio/widgets/ResponsiveWidget.dart';
@@ -8,18 +8,28 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    super.initState();
+    customTheme.addListener(() {
+      setState(() {});
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Aditya R',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        canvasColor: Color(0xFF1C1C1C),
-        textTheme: GoogleFonts.poppinsTextTheme(
-            Theme.of(context).textTheme.apply(bodyColor: Color(0xFFF1F1F1))),
-      ),
+      themeMode: customTheme.currentTheme,
+      theme: CustomTheme.lightTheme,
+      darkTheme: CustomTheme.darkTheme,
       home: ResponsiveWidget(
         mobileScreen: MobileView(),
         desktopScreen: DesktopView(),
