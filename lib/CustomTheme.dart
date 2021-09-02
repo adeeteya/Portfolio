@@ -18,8 +18,7 @@ class CustomColors {
 }
 
 class CustomTheme with ChangeNotifier {
-  static bool _isDarkTheme =
-      (ThemeMode.system == ThemeMode.dark) ? true : false;
+  static bool _isDarkTheme = ThemeMode.system == ThemeMode.dark;
   ThemeMode get currentTheme => _isDarkTheme ? ThemeMode.dark : ThemeMode.light;
 
   Color get primaryColor =>
