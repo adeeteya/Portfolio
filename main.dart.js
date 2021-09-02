@@ -64402,7 +64402,7 @@ G:function(a,b){var s=null,r=t.p
 return T.cZ(H.a([T.fD(X.aft("assets/about_me.json"),1),T.fD(T.cN(H.a([L.aH("About Me",A.aD(s,s,s,s,s,s,s,s,s,s,s,48,s,C.a0,s,s,!0,s,s,s,s,s,s,s),s,s),L.aH("App Developer and Tech Enthusiast based in India. Currently Interested in Flutter and AI. Love playing sports and videogames on my freetime.",A.aD(s,s,s,s,s,s,s,s,s,s,s,18,s,s,s,s,!0,s,s,s,s,s,s,s),s,s)],r),C.t,C.bS),1)],r),C.t,C.a4,C.a5)}}
 E.F3.prototype={
 G:function(a,b){var s=null,r=t.p
-return T.cN(H.a([T.fD(X.aft("assets/about_me.json"),1),T.fD(new T.eS(C.ci,T.cN(H.a([L.aH("About Me",A.aD(s,s,s,s,s,s,s,s,s,s,s,18,s,C.a0,s,s,!0,s,s,s,s,s,s,s),s,s),L.aH("App Developer and Tech Enthusiast based in India, . Currently Interested in Flutter and AI. Love playing sports and videogames on my freetime.",A.aD(s,s,s,s,s,s,s,s,s,s,s,16,s,s,s,s,!0,s,s,s,s,s,s,s),s,s)],r),C.t,C.bS),s),2)],r),C.t,C.a4)}}
+return T.cN(H.a([T.fD(X.aft("assets/lottie/about_me.json"),1),T.fD(new T.eS(C.ci,T.cN(H.a([L.aH("About Me",A.aD(s,s,s,s,s,s,s,s,s,s,s,18,s,C.a0,s,s,!0,s,s,s,s,s,s,s),s,s),L.aH("App Developer and Tech Enthusiast based in India, . Currently Interested in Flutter and AI. Love playing sports and videogames on my freetime.",A.aD(s,s,s,s,s,s,s,s,s,s,s,16,s,s,s,s,!0,s,s,s,s,s,s,s),s,s)],r),C.t,C.bS),s),2)],r),C.t,C.a4)}}
 G.D1.prototype={
 G:function(a,b){var s,r,q,p,o=null,n=H.a([new Y.eg(C.e0,"Phone","+91 7200972008",new G.Ts()),new Y.eg(C.e_,"Mail","aditya.r@email.com",new G.Tt()),new Y.eg(C.eT,"Discord","Aditya#0039",new G.Tu(b))],t.c3)
 $.bj()
@@ -64774,7 +64774,7 @@ $R:0,
 $S:0}
 M.Kv.prototype={}
 K.F5.prototype={
-G:function(a,b){var s,r,q,p,o=this,n=null,m=4279571735,l=X.aft("assets/person.json"),k=o.c.d,j=t.gQ,i=j.a(C.c.gbP(k))
+G:function(a,b){var s,r,q,p,o=this,n=null,m=4279571735,l=X.aft("assets/lottie/person.json"),k=o.c.d,j=t.gQ,i=j.a(C.c.gbP(k))
 if(i.gkQ(i)===0)s=C.Q
 else{$.bj()
 s=$.bo()?C.T:new P.w(m)}s=U.Ix(!1,L.aH("home",A.aD(n,n,s,n,n,n,n,n,n,n,n,24,n,n,n,n,!0,n,n,n,n,n,n,n),n,n),C.l,n,n,n,new K.Zn(o,b),n)
