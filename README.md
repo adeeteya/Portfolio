@@ -15,3 +15,5 @@ A portfolio website I created for myself. Website built with flutter web.
 > Using Github Api to fetch repos
 
 > Using PageView and Scrollbar Widgets
+
+> Implementing a dark and light mode
