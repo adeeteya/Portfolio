@@ -3,6 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
+<<<<<<< HEAD
   ".git/COMMIT_EDITMSG": "e43969e0096d4acb26b9b6a48b442f65",
 ".git/config": "157b48d45c8c9593f4639f666be973b4",
 ".git/description": "a0a7c3fff21f2aea3cfa1d0316dd816c",
@@ -249,6 +250,9 @@ const RESOURCES = {
 ".git/refs/remotes/origin/gh-pages": "9ea6168b217a1c4155080f6760ef7d72",
 ".git/refs/remotes/origin/master": "7f13d08a3dcbc455b19f6bed0b9815c8",
 "assets/AssetManifest.json": "b8d0d5ea2e2abe651c24ac151ee4a552",
+=======
+  "assets/AssetManifest.json": "b8d0d5ea2e2abe651c24ac151ee4a552",
+>>>>>>> 0fae7df... 3.5.0
 "assets/assets/about_me.json": "cc659761d547011ee014f2e6ec13418d",
 "assets/assets/icons/Android.png": "b522aceff2bcafa4dff080d8b2504354",
 "assets/assets/icons/Arduino.png": "d311f87f6afc1e3b69db306e9ae69808",
@@ -277,6 +281,7 @@ const RESOURCES = {
 "icons/Icon-512.png": "555113a9d551c75b40ee11bc304be4a3",
 "icons/Icon-maskable-192.png": "1fd4f9d10e0db0de602f96a275cc5b5c",
 "icons/Icon-maskable-512.png": "555113a9d551c75b40ee11bc304be4a3",
+<<<<<<< HEAD
 "index.html": "9e95e43cc15533a306227ba249c0282b",
 "/": "9e95e43cc15533a306227ba249c0282b",
 "main.dart.js": "6c3c5de526ff15dd0222ecc84610f904",
@@ -290,6 +295,13 @@ const RESOURCES = {
 "splash/img/light-3x.png": "20fc038c051c91d413c5565314657cff",
 "splash/img/light-4x.png": "6152248684adc358a387de644161cfc3",
 "splash/style.css": "b88ef1f86820fc24dedf891670e54d43",
+=======
+"index.html": "1e76bbd306d7c589cb8e18eba500ddcd",
+"/": "1e76bbd306d7c589cb8e18eba500ddcd",
+"main.dart.js": "f4eb6c0f674c70fa154ff5030efb7f8a",
+"manifest.json": "96b6496ba834d99a31dbdd783336d362",
+"styles.css": "ac47d5c4865e5cfe8ce6ab99f0f8bba5",
+>>>>>>> 0fae7df... 3.5.0
 "version.json": "7d7cdf0fd2c36f0711b4b1ef13b9b90a"
 };
 
