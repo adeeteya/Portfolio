@@ -11,7 +11,7 @@ class MobileSkills extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Center(
               child: Text(
@@ -23,12 +23,12 @@ class MobileSkills extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Using now',
+                  'Using now:',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
                 SizedBox(height: 10),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: SkillItem.usingNowItems.map((item) {
                     return SkillIcon(skillItem: item, isDesktop: false);
                   }).toList(),
@@ -39,12 +39,12 @@ class MobileSkills extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Learning',
+                  'Learning:',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
                 SizedBox(height: 10),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: SkillItem.learningItems.map((item) {
                     return SkillIcon(skillItem: item, isDesktop: false);
                   }).toList(),
@@ -55,12 +55,12 @@ class MobileSkills extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Other Skills',
+                  'Other Skills:',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
                 SizedBox(height: 10),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: SkillItem.otherSkillsItems.map((item) {
                     return SkillIcon(skillItem: item, isDesktop: false);
                   }).toList(),

@@ -45,14 +45,19 @@ class MobileHome extends StatelessWidget {
                 AnimatedTextKit(repeatForever: true, animatedTexts: [
                   TypewriterAnimatedText('Flutter Development',
                       speed: const Duration(milliseconds: 150),
+                      textAlign: TextAlign.center,
                       textStyle:
                           TextStyle(fontSize: 24, fontWeight: FontWeight.w600)),
                   TypewriterAnimatedText('Arduino Development',
                       speed: const Duration(milliseconds: 150),
-                      textStyle:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.w600)),
+                      textAlign: TextAlign.center,
+                      textStyle: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w600,
+                      )),
                   TypewriterAnimatedText('Native Android Development',
                       speed: const Duration(milliseconds: 150),
+                      textAlign: TextAlign.center,
                       textStyle:
                           TextStyle(fontSize: 24, fontWeight: FontWeight.w600)),
                 ]),
@@ -101,7 +106,8 @@ class MobileHome extends StatelessWidget {
                               borderRadius: BorderRadius.circular(10)),
                           padding: EdgeInsets.symmetric(
                               vertical: 16, horizontal: 30)),
-                      icon: Icon(Icons.mail_outlined),
+                      icon: Icon(Icons.mail_outlined,
+                          color: CustomColors.seashell),
                       onPressed: () {
                         launch("mailto:aditya.r@email.com?body=Hey,");
                       },

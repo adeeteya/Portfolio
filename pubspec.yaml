@@ -1,9 +1,9 @@
 name: portfolio
-description: A Flutter portfolio website.
+description: A Flutter portfolio website for Aditya.
 
 publish_to: 'none'
 
-version: 1.0.0+1
+version: 3.0.0+1
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -19,10 +19,14 @@ dependencies:
   animated_text_kit: ^4.2.1
   url_launcher: ^6.0.9
   lottie: ^1.1.0
+  firebase_core: ^1.6.0
+  cloud_firestore: ^2.5.1
+  provider: ^6.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_native_splash: ^1.2.1
 
 flutter:
 
@@ -38,3 +42,7 @@ flutter:
   #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
+flutter_native_splash:
+  color: "#EEBF63"
+  image: assets/loading_image.png
+  web: true

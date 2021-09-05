@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomColors {
@@ -18,7 +19,8 @@ class CustomColors {
 }
 
 class CustomTheme with ChangeNotifier {
-  static bool _isDarkTheme = ThemeMode.system == ThemeMode.dark;
+  static bool _isDarkTheme =
+      SchedulerBinding.instance!.window.platformBrightness == Brightness.dark;
   ThemeMode get currentTheme => _isDarkTheme ? ThemeMode.dark : ThemeMode.light;
 
   Color get primaryColor =>

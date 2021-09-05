@@ -1,21 +1,11 @@
-import 'dart:convert';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'package:portfolio/models/Repo.dart';
+import 'package:portfolio/models/Portfolio.dart';
 import 'package:portfolio/widgets/RepoCard/DesktopRepoCard.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../CustomTheme.dart';
-
-Future<RepoList?> fetchRepos() async {
-  final response = await http
-      .get(Uri.parse("https://api.github.com/users/adityar224/repos"));
-  if (response.statusCode == 200) {
-    return RepoList.fromJson(json.decode(response.body));
-  } else {
-    return null;
-  }
-}
 
 class DesktopProjects extends StatefulWidget {
   const DesktopProjects({Key? key}) : super(key: key);
@@ -25,8 +15,12 @@ class DesktopProjects extends StatefulWidget {
 }
 
 class _DesktopProjectsState extends State<DesktopProjects> {
+  PageController _pageController =
+      PageController(viewportFraction: 1 / 3, initialPage: 1);
+  int _pageNo = 1;
   @override
   Widget build(BuildContext context) {
+    Portfolio _portfolio = Provider.of<Portfolio>(context);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 5),
       decoration: BoxDecoration(
@@ -38,52 +32,77 @@ class _DesktopProjectsState extends State<DesktopProjects> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            Text(
-              'Projects',
-              style: TextStyle(fontSize: 32, fontWeight: FontWeight.w600),
-            ),
-            ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    primary: customTheme.primaryColor,
-                    padding: EdgeInsets.all(20),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10))),
-                onPressed: () {
-                  launch("https://github.com/adityar224");
-                },
-                child: Text(
-                  'View More',
-                  style: TextStyle(color: Colors.white),
-                )),
-          ]),
-          FutureBuilder<RepoList?>(
-              future: fetchRepos(),
-              initialData: null,
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.done) {
-                  if (snapshot.hasError || snapshot.data == null) {
-                    return Center(
-                        child: Text("Unable to fetch data at the moment"));
-                  } else {
-                    List<Repo> repoList = snapshot.data!.repos;
-                    return Container(
-                      height: 250,
-                      child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: repoList.length,
-                        itemBuilder: (context, index) {
-                          return DesktopRepoCard(repo: repoList[index]);
-                        },
-                      ),
-                    );
-                  }
-                }
-                return Center(
-                    child: CircularProgressIndicator(
-                  color: CustomColors.porsche,
-                ));
-              }),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Projects',
+                    style: TextStyle(fontSize: 32, fontWeight: FontWeight.w600),
+                  ),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          primary: customTheme.primaryColor,
+                          padding: EdgeInsets.all(20),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10))),
+                      onPressed: () {
+                        launch("https://github.com/adityar224");
+                      },
+                      child: Text(
+                        'View More',
+                        style: TextStyle(color: Colors.white),
+                      )),
+                ]),
+          ),
+          (_portfolio.repoList == null)
+              ? CircularProgressIndicator()
+              : Row(
+                  children: [
+                    IconButton(
+                      color: CustomColors.porsche,
+                      icon: Icon(Icons.arrow_back_ios),
+                      onPressed: (_pageNo == 0)
+                          ? null
+                          : () {
+                              _pageController.previousPage(
+                                  duration: Duration(milliseconds: 300),
+                                  curve: Curves.easeOutSine);
+                            },
+                    ),
+                    Expanded(
+                      child: Container(
+                          height: 250,
+                          child: PageView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemCount: _portfolio.repoList!.length,
+                            clipBehavior: Clip.none,
+                            controller: _pageController,
+                            onPageChanged: (number) {
+                              setState(() {
+                                _pageNo = number;
+                              });
+                            },
+                            itemBuilder: (context, index) {
+                              return DesktopRepoCard(
+                                  repo: _portfolio.repoList![index]);
+                            },
+                          )),
+                    ),
+                    IconButton(
+                      color: CustomColors.porsche,
+                      icon: Icon(Icons.arrow_forward_ios),
+                      onPressed: (_pageNo == _portfolio.repoList!.length - 1)
+                          ? null
+                          : () {
+                              _pageController.nextPage(
+                                  duration: Duration(milliseconds: 300),
+                                  curve: Curves.easeInSine);
+                            },
+                    ),
+                  ],
+                ),
         ],
       ),
     );

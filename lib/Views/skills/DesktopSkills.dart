@@ -17,36 +17,36 @@ class DesktopSkills extends StatelessWidget {
           ),
         ),
         Text(
-          'Using now',
+          'Using now:',
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
         ),
         SizedBox(height: 20),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: SkillItem.usingNowItems.map((item) {
             return SkillIcon(skillItem: item, isDesktop: true);
           }).toList(),
         ),
         SizedBox(height: 20),
         Text(
-          'Learning',
+          'Learning:',
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
         ),
         SizedBox(height: 20),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: SkillItem.learningItems.map((item) {
             return SkillIcon(skillItem: item, isDesktop: true);
           }).toList(),
         ),
         SizedBox(height: 20),
         Text(
-          'Other Skills',
+          'Other Skills:',
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
         ),
         SizedBox(height: 20),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: SkillItem.otherSkillsItems.map((item) {
             return SkillIcon(skillItem: item, isDesktop: true);
           }).toList(),

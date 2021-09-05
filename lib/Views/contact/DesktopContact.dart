@@ -45,6 +45,7 @@ class DesktopContact extends StatelessWidget {
             color: customTheme.contactBackgroundColor,
             padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text(
                   'Contact Me',
@@ -53,7 +54,6 @@ class DesktopContact extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                       color: customTheme.alternateHeadingText),
                 ),
-                SizedBox(height: 40),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: contactItems.map((item) {

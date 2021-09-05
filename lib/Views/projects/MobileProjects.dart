@@ -1,20 +1,9 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'package:portfolio/CustomTheme.dart';
-import 'package:portfolio/models/Repo.dart';
+import 'package:portfolio/models/Portfolio.dart';
 import 'package:portfolio/widgets/RepoCard/MobileRepoCard.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-Future<RepoList?> fetchRepos() async {
-  final response = await http
-      .get(Uri.parse("https://api.github.com/users/adityar224/repos"));
-  if (response.statusCode == 200) {
-    return RepoList.fromJson(json.decode(response.body));
-  } else {
-    return null;
-  }
-}
 
 class MobileProjects extends StatefulWidget {
   const MobileProjects({Key? key}) : super(key: key);
@@ -26,6 +15,7 @@ class MobileProjects extends StatefulWidget {
 class _MobileProjectsState extends State<MobileProjects> {
   @override
   Widget build(BuildContext context) {
+    Portfolio _portfolio = Provider.of<Portfolio>(context);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       decoration: BoxDecoration(
@@ -56,33 +46,19 @@ class _MobileProjectsState extends State<MobileProjects> {
                   style: TextStyle(color: Colors.white),
                 )),
           ]),
-          FutureBuilder<RepoList?>(
-              future: fetchRepos(),
-              initialData: null,
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.done) {
-                  if (snapshot.hasError || snapshot.data == null) {
-                    return Center(
-                        child: Text("Unable to fetch data at the moment"));
-                  } else {
-                    List<Repo> repoList = snapshot.data!.repos;
-                    return Container(
-                      height: 250,
-                      child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: repoList.length,
-                        itemBuilder: (context, index) {
-                          return MobileRepoCard(repo: repoList[index]);
-                        },
-                      ),
-                    );
-                  }
-                }
-                return Center(
-                    child: CircularProgressIndicator(
-                  color: CustomColors.porsche,
-                ));
-              }),
+          (_portfolio.repoList == null)
+              ? CircularProgressIndicator()
+              : Container(
+                  height: 250,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: _portfolio.repoList!.length,
+                    clipBehavior: Clip.none,
+                    itemBuilder: (context, index) {
+                      return MobileRepoCard(repo: _portfolio.repoList![index]);
+                    },
+                  ),
+                ),
         ],
       ),
     );

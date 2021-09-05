@@ -34,9 +34,13 @@ class DesktopRepoCard extends StatelessWidget {
                   fontSize: 24, fontWeight: FontWeight.w600, letterSpacing: 2),
               textAlign: TextAlign.center,
             ),
-            Text(
-              repo.description,
-              style: TextStyle(fontSize: 16),
+            Flexible(
+              child: SingleChildScrollView(
+                child: Text(
+                  repo.description,
+                  style: TextStyle(fontSize: 16),
+                ),
+              ),
             )
           ],
         ),
