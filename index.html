@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+  <base href="/Portfolio/">
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Aditya's Portfolio Website">
+  <meta name="description" content="A Portfolio Website for Aditya, designed and developed by Aditya.">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,7 +18,6 @@
   <title>Aditya's Portfolio</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" type="text/css" href="styles.css">
-
 </head>
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
@@ -26,7 +25,7 @@
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <h2 class="animate">Loading</h2>
   <script>
-    var serviceWorkerVersion = '3800728729';
+    var serviceWorkerVersion = '147235038';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -59,7 +58,7 @@
             if (!reg.active && (reg.installing || reg.waiting)) {
               // No active web worker and we have installed or are installing
               // one for the first time. Simply wait for it to activate.
-              waitForActivation(reg.installing || reg.waiting);
+              waitForActivation(reg.installing ?? reg.waiting);
             } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
               // When the app updates the serviceWorkerVersion changes, so we
               // need to ask the service worker to update.
@@ -89,8 +88,8 @@
       loadMainDartJs();
     }
   </script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   <script type="module">
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -108,7 +107,7 @@
   };
 
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  const app=firebase.initializeApp(firebaseConfig);
 </script>
 </body>
 </html>
