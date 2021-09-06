@@ -26,7 +26,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_native_splash: ^1.2.1
 
 flutter:
 
@@ -42,7 +41,3 @@ flutter:
   #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
-flutter_native_splash:
-  color: "#EEBF63"
-  image: assets/loading_image.png
-  web: true

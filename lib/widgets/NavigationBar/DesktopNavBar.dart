@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hovering/hovering.dart';
-
-import '../../CustomTheme.dart';
+import 'package:portfolio/CustomTheme.dart';
 
 class DesktopNavBar extends StatelessWidget with PreferredSizeWidget {
   final PageController controller;

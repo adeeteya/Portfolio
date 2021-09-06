@@ -24,7 +24,8 @@ class DesktopRepoCard extends StatelessWidget {
             color: customTheme.cardButtonColor,
             borderRadius: BorderRadius.circular(30)),
         hoverDecoration: BoxDecoration(
-            color: Color(0X80EEBF63), borderRadius: BorderRadius.circular(20)),
+            color: customTheme.primaryColor,
+            borderRadius: BorderRadius.circular(20)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [

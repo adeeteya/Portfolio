@@ -98,7 +98,7 @@ class MobileHome extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     ElevatedButton.icon(
                       style: ElevatedButton.styleFrom(
@@ -119,7 +119,6 @@ class MobileHome extends StatelessWidget {
                             fontWeight: FontWeight.bold),
                       ),
                     ),
-                    SizedBox(width: 20),
                     OutlinedButton.icon(
                       style: OutlinedButton.styleFrom(
                           primary: customTheme.outlinedButtonColor,
