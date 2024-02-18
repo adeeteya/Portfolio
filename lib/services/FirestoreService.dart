@@ -11,7 +11,7 @@ class FireStoreService {
     DocumentSnapshot textFieldDocument =
         await _instance.collection('portfolio').doc('textfield').get();
     final repoResponse = await http
-        .get(Uri.parse("https://api.github.com/users/adityar224/repos"));
+        .get(Uri.parse("https://api.github.com/users/adeeteya/repos"));
     List<Repo>? repoList;
     if (repoResponse.statusCode == 200) {
       repoList = RepoList.fromJson(json.decode(repoResponse.body)).repos;

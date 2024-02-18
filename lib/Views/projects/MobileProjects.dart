@@ -39,7 +39,7 @@ class _MobileProjectsState extends State<MobileProjects> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
                 onPressed: () {
-                  launch("https://github.com/adityar224");
+                  launch("https://github.com/adeeteya");
                 },
                 child: Text(
                   'View More',
