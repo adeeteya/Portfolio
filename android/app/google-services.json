@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "336504567970",
+    "project_id": "portfolio-d0d78",
+    "storage_bucket": "portfolio-d0d78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336504567970:android:af8a5641769984b826fffb",
+        "android_client_info": {
+          "package_name": "com.aditya.portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336504567970-sf9sg2nt3c01ot8nkvugta6ghg175fpl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARYpFgpmA3UygMVrVjrBL1UJEkXqfRg8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "336504567970-sf9sg2nt3c01ot8nkvugta6ghg175fpl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
